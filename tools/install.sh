@@ -89,6 +89,7 @@ user_can_sudo() {
   # Termux can't run sudo, so we can detect it and exit the function early.
   case "$PREFIX" in
   *com.termux*) return 1 ;;
+  *com.nightmare*) return 1 ;;
   esac
   # The following command has 3 parts:
   #
